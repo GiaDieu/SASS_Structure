@@ -11,7 +11,10 @@
 #### config npm run
 
 ```JSON
-"scripts": {
-    "compilecss": "node-sass sass/main.scss css/style.css -w"
-},
+{
+    "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "compile": "node-sass --watch sass -o css"
+  },
+}
 ```
