@@ -1,33 +1,35 @@
-a.btn,
-a.btn:link,
-a.btn:visited {
-  display: inline-block;
-  text-decoration: none;
-  color: #777777;
-  background-color: #fff;
-  border-radius: 100px;
-  font-size: 1.5rem;
-  text-transform: uppercase;
-  padding: 1rem 2rem;
-  position: relative;
-  transition: all 0.5s;
-  animation: moveInBottom 0.8s ease-out 0.75s;
-  animation-fill-mode: backwards;
+a.btn {
+  &--white {
+    color: $color-gray;
+    background-color: $color-gray-light-1;
+  }
+  &:link,
+  &:visited {
+    display: inline-block;
+    text-decoration: none;
+    border-radius: 100px;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    position: relative;
+    transition: all 0.5s;
+    animation: moveInBottom 0.8s ease-out 0.75s;
+    animation-fill-mode: backwards;
 
-  &:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-    &::after {
-      transform: scaleX(1.4) scaleY(1.6);
-      opacity: 0;
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+      &::after {
+        transform: scaleX(1.4) scaleY(1.6);
+        opacity: 0;
+      }
+    }
+
+    &:active {
+      transform: translateY(-1px);
+      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
     }
   }
-
-  &:active {
-    transform: translateY(-1px);
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-  }
-
   &::after {
     display: inline-block;
     content: "";
@@ -36,7 +38,7 @@ a.btn:visited {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: #fff;
+    background-color: $color-white;
     border-radius: 100px;
     z-index: -1;
     transition: all 0.4s;
