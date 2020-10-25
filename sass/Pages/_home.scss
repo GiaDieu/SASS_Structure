@@ -2,5 +2,24 @@
   background-color: $color-gray-light-1;
   padding: 25rem 0;
   margin-top: -25rem;
-  font-size: 1rem;
+}
+
+.section-skills {
+  padding: 20rem 0;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-light-blue, 0.8),
+      rgba($color-dark-blue, 0.6)
+    ),
+    url("/img/project-1.jpg");
+  background-size: cover;
+  position: relative;
+  clip-path: ellipse(70% 38% at 50% 50%);
+  margin-top: -18rem;
+}
+
+.section-courses {
+  background-color: $color-gray-light-1;
+  padding: 25rem 0 10rem 0;
+  margin-top: -20rem;
 }
