@@ -1,0 +1,37 @@
+.composition {
+  position: relative;
+
+  &__photo {
+    width: 50%;
+    box-shadow: 0 1.5rem 4rem rgba($color-dark, 0.4);
+    border-radius: 0.2rem;
+    position: absolute;
+    outline-offset: 1rem;
+    transition: all 0.2s;
+    z-index: 1;
+    &--1 {
+      left: 0;
+      top: -2rem;
+    }
+    &--2 {
+      right: 2rem;
+      top: 2rem;
+    }
+    &--3 {
+      left: 10%;
+      top: 10rem;
+    }
+
+    //hieu ung nao dc hover va tim class __photo ma no khong duoc hover
+    &:hover &__photo:not(:hover) {
+      transform: scale(0.9);
+    }
+
+    &:hover {
+      transform: scale(1.05);
+      outline: 1.5rem solid $color-light-blue;
+      box-shadow: 0 2.5rem 4rem rbga($color-dark, 0.5);
+      z-index: 2;
+    }
+  }
+}
