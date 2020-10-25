@@ -5,7 +5,6 @@
   &:not(:last-child) {
     margin-bottom: $gutter-vertical;
   }
-  // font-size: 1rem;
   max-width: $grid_width;
   margin: 0 auto;
   [class^="col-"] {
