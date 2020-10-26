@@ -23,3 +23,17 @@
   padding: 25rem 0 10rem 0;
   margin-top: -20rem;
 }
+
+.section-testimonials {
+  position: relative;
+  padding: 5rem 0;
+}
+
+.section-enroll {
+  padding: 10rem 0;
+  background-image: linear-gradient(
+    to right bottom,
+    rgba($color-light-blue, 0.85),
+    rgba($color-dark-blue, 0.85)
+  );
+}

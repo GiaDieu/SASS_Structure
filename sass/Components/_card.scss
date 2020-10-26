@@ -15,7 +15,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    backface-visibility: hidden;
+    backface-visibility: hidden; // hide the BACK element
     &--front {
       background-color: $color-white;
     }
@@ -23,6 +23,27 @@
     &--back {
       background-color: $color-seagreen;
       transform: rotateY(180deg);
+      &-1 {
+        background-image: linear-gradient(
+          to right,
+          $color-secondary-light-orange,
+          $color-secondary-dark-orange
+        );
+      }
+      &-2 {
+        background-image: linear-gradient(
+          to right,
+          $color-light-blue,
+          $color-dark-blue
+        );
+      }
+      &-3 {
+        background-image: linear-gradient(
+          to right,
+          $color-tertiary-light-green,
+          $color-tertiary-dark-green
+        );
+      }
     }
   }
 
@@ -30,7 +51,7 @@
     clip-path: ellipse(80% 70% at 50% 30%);
     background-size: cover;
     height: 23rem;
-    background-blend-mode: screen;
+    background-blend-mode: screen; // the picture background will mixed up with the color background below
     &--1 {
       background-image: linear-gradient(
           to right,
@@ -72,7 +93,7 @@
   &__heading-span {
     border-radius: 5rem;
     padding: 1rem 1.5rem;
-    -webkit-box-decoration-break: clone;
+    -webkit-box-decoration-break: clone; //heading-span 'Control' and 'your time' is in the same block
     box-decoration-break: clone;
     &--1 {
       background-image: linear-gradient(
@@ -113,6 +134,32 @@
         }
       }
     }
+  }
+
+  &__cta {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%;
+  }
+
+  &__price-box {
+    text-align: center;
+    color: $color-white;
+    margin-bottom: 8rem;
+  }
+
+  &__price-only {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+  }
+
+  &__price-value {
+    font-size: 6rem;
+    font-weight: 100;
+    margin-bottom: 5rem;
   }
 
   &:hover &__side--front {

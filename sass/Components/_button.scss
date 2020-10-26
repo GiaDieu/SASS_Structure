@@ -1,8 +1,4 @@
-a.btn {
-  &--white {
-    color: $color-gray;
-    background-color: $color-gray-light-1;
-  }
+.btn {
   &:link,
   &:visited {
     display: inline-block;
@@ -12,24 +8,24 @@ a.btn {
     text-transform: uppercase;
     padding: 1rem 2rem;
     position: relative;
-    transition: all 0.5s;
-    animation: moveInBottom 0.8s ease-out 0.75s;
-    animation-fill-mode: backwards;
+  }
 
-    &:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
-      &::after {
-        transform: scaleX(1.4) scaleY(1.6);
-        opacity: 0;
-      }
-    }
-
-    &:active {
-      transform: translateY(-1px);
-      box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  &--white {
+    color: $color-gray;
+    background-color: $color-gray-light-1;
+    &::after {
+      background-color: $color-gray-light-1;
     }
   }
+
+  &--blue {
+    background-color: $color-medium-blue;
+    color: $color-gray-light-1;
+    &::after {
+      background-color: $color-medium-blue;
+    }
+  }
+
   &::after {
     display: inline-block;
     content: "";
@@ -38,10 +34,28 @@ a.btn {
     position: absolute;
     top: 0;
     left: 0;
-    background-color: $color-white;
     border-radius: 100px;
     z-index: -1;
     transition: all 0.4s;
+  }
+
+  &:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+    }
+  }
+
+  &:active {
+    transform: translateY(-1px);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+  }
+
+  &--animated {
+    animation: moveInBottom 0.8s ease-out 0.75s;
+    animation-fill-mode: backwards;
   }
 }
 
@@ -54,6 +68,7 @@ a.btn {
     border-bottom: 1px solid $color-light-blue;
     padding: 0.3rem;
     font-size: $default-font-size;
+    text-transform: uppercase;
   }
 
   &:hover {
