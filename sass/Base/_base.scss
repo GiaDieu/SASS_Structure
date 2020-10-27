@@ -1,3 +1,5 @@
+@import "../Abstract/mixin";
+
 *,
 *::before,
 *::after {
@@ -6,10 +8,11 @@
   margin: 0;
 }
 
-body {
-  box-sizing: border-box;
+html {
+  font-size: 62.5%;
 }
 
-html {
-  font-size: 50%;
+body {
+  box-sizing: border-box;
+  padding: 2rem;
 }

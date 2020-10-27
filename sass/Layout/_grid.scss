@@ -1,5 +1,3 @@
-@import "../Abstract/mixin";
-
 .row {
   @include clearFix;
   &:not(:last-child) {

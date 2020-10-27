@@ -5,3 +5,19 @@
     clear: both;
   }
 }
+
+@mixin absCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin delay($rule, $number, $value) {
+  @for $i from 1 to ($number + 1) {
+    &:nth-child(#{$i}) {
+      -webkit-#{$rule}-delay: #{$i * $value}s;
+      #{$rule}-delay: #{$i * $value}s;
+    }
+  }
+}
